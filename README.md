@@ -1,73 +1,81 @@
-# FitPlan AI: A Meal and Workout Planner for Busy Students
+# FitPlan AI
 
-## 1. Project Partners
-Jared Allen (individual project)
+FitPlan AI is a multi-agent AI-powered fitness and meal planning application designed for busy students and individuals who struggle to fit health routines into their day-to-day schedule.
 
----
+The app generates personalized workout plans, meal plans, editable schedules, calendar files, email-based schedule delivery, and simple progress tracking.
 
-## 2. Project Title
-FitPlan AI: A Meal and Workout Planner with Scheduling and Reminders for Busy Students
+## Project Partner
 
----
+Jared Allen
 
-## 3. Project Description
+## Project Title
 
-FitPlan AI is an AI-powered application designed to help students and busy individuals create realistic meal and workout plans that fit into their daily schedules. Many existing fitness and nutrition tools assume users have the time and resources to follow complex or time-intensive routines, which is often not practical for full-time students.
+FitPlan AI: A Multi-Agent Fitness and Meal Planner with Scheduling and Email Support
 
-This project focuses on generating simple, time-efficient, and easy-to-follow plans that prioritize consistency over perfection. Users will input information such as fitness goals, availability, dietary preferences or restrictions, physical characteristics (age, height, weight, gender), and available equipment.
+## Project Description
 
-Based on these inputs, the system uses generative AI to produce:
-- A personalized weekly workout plan  
-- A simple and time-efficient meal plan  
-- An optional grocery list based on the generated meals  
-- A short explanation describing how the plan fits the user’s goals and schedule  
+FitPlan AI helps users create realistic workout and meal plans based on their goals, availability, dietary preferences, physical stats, and available equipment. The application focuses on creating plans that are practical and time-efficient rather than overly complicated.
 
-In addition to generating plans, the system includes scheduling and automation features to help users stay consistent:
-- Converts the workout plan into a structured weekly schedule  
-- Sends email reminders or summaries based on the generated plan  
-- Optionally formats the schedule for calendar-style viewing or export  
+Users enter information such as fitness goals, workout availability, workout split preference, workout style, dietary restrictions, age, height, weight, gender, and equipment. The system uses multiple AI agents to generate a workout plan, meal plan, schedule, calendar-ready file, and reminder email.
 
-The application displays all outputs in a clean and easy-to-read format and demonstrates how generative AI can be combined with automation to create a practical, real-world wellness tool.
+The application also allows users to edit the generated schedule, export the plan, send the schedule by email, and track workout progress.
 
----
+## Features
 
-## 4. Resources to Use
+- Personalized AI-generated workout plans
+- Personalized AI-generated meal plans
+- Custom workout split option
+- Workout style options such as strength training, hypertrophy, plyometrics, functional fitness, mobility, and calisthenics
+- Exercise instructions included in the workout plan
+- Editable workout schedule
+- Calendar file export using `.ics`
+- Email delivery of workout schedule and calendar attachment
+- Downloadable full plan as `.txt`
+- Downloadable schedule as `.json`
+- Local progress tracking with workout completion and notes
+- Multi-tab Streamlit interface
 
-The project will use the following tools and technologies:
+## AI Agent Structure
 
-- OpenAI API for generating workout plans, meal plans, and explanations  
-- Python as the primary programming language  
-- Streamlit for building the user interface  
-- Gmail / email automation (based on course lab work) for sending reminders  
-- Concepts from course labs, including:
-  - Prompt engineering  
-  - AI-based content generation  
-  - Automation workflows (email integration)  
+The project uses a simple multi-agent workflow:
 
-No external datasets are required, as all content will be generated using AI.
+1. **Workout Agent**  
+   Generates a personalized workout plan based on the user’s goals, equipment, schedule, workout split, and workout style.
 
----
+2. **Meal Agent**  
+   Generates a simple meal plan and optional grocery list based on dietary preferences, restrictions, and fitness goals.
 
-## 5. Deliverables
+3. **Scheduling Agent**  
+   Creates a weekly schedule and reminder preview based on the generated workout and meal plans.
 
-The final project will include:
+4. **Schedule JSON Agent**  
+   Converts the workout schedule into structured JSON so it can be edited, exported, emailed, and converted into a calendar file.
 
-- A fully functional application that:
-  - Accepts user input (goals, schedule, dietary preferences, physical stats, equipment)  
-  - Generates a workout plan, meal plan, grocery list, and explanation  
-  - Converts the plan into a structured weekly schedule  
-  - Sends at least one automated email (plan summary or reminder)  
+5. **Coordinator Agent**  
+   Runs each agent and combines the outputs into one complete user-facing result.
 
-- A GitHub repository containing:
-  - All source code  
-  - A structured README file with setup and usage instructions  
+## Resources Used
 
-- A recorded demonstration (maximum 10 minutes) showing:
-  - The full workflow of the application  
-  - Core features including AI generation and email functionality  
+- Python
+- Streamlit
+- OpenAI API
+- python-dotenv
+- smtplib for email sending
+- Gmail App Password for authenticated email delivery
+- Local JSON file for progress tracking
 
-- A final written report describing:
-  - The problem being addressed  
-  - System design and implementation  
-  - Challenges and limitations  
-  - Potential future improvements  
+## Deliverables
+
+The final project includes:
+
+- A working Streamlit application
+- AI-generated workout and meal plans
+- Editable schedule feature
+- Calendar `.ics` export
+- Email-based schedule delivery
+- Progress tracking
+- GitHub repository with code and documentation
+- Final report
+- Recorded demo presentation
+
+
